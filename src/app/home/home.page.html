@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-title size="large">Bio Data</ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-input label="NIM" labelPlacement="floating" type="number" [(ngModel)]="form.nik"></ion-input>
+    <br>
+    <ion-input label="nama" labelPlacement="floating" [(ngModel)]="form.nama"></ion-input>
+    <br>
+    <ion-input label="alamat" labelPlacement="floating" [(ngModel)]="form.alamat" ></ion-input>
+    <ion-datetime-button datetime="date"></ion-datetime-button>
+    
+    
+    
+    <ion-button color="success" (click)="sendToWhatssapp()">Kirim Ke Whatsapp</ion-button>
+    <br>
+    <ion-button color="primary" (click)="sendToTelegram()">Kirim Ke Telegram</ion-button>
+    <br>
+    <ion-button color="danger" (click)="sendToEmail()">Kirim Ke Email</ion-button>
+  </div>
+</ion-content>
